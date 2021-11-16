@@ -98,7 +98,7 @@ pipeline {
             steps {
                 sh "chmod +x ec2.py"
                 sh "pwd"
-                sh "./ec2.py --list"
+                sh "python3 ec2.py --list"
                 //sh "ansible -i ec2.py all -m ping"
                 //sh "ansible-playbook -i ec2.py tag_Owner_VZhig -m ping -u ubuntu --private-key "
             }
