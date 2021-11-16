@@ -50,7 +50,7 @@ pipeline {
               withCredentials([usernamePassword(credentialsId: 'docker-login-creds', passwordVariable: 'password', usernameVariable: 'username')]){
                 sh "docker build -f Dockerfile . -t ${username}/tmscourseproject:${BUILD_ID}"
                 sh "docker login -u${username} -p${password}"
-                sh "docker push ${username}/tmscourseproject:${BUILD_ID}"
+                sh "sudo docker push ${username}/tmscourseproject:${BUILD_ID}"
               }
             }
         }
