@@ -12,7 +12,7 @@ pipeline {
         CLASS           = "GitSCM"
         BRANCH          = "main"
         GIT_CREDENTIALS = "TMS_Project"
-        GIT_URL         = "git@github.com:TMS_Course_Project_Infra.git"
+        GIT_URL         = "git@github.com:vszhigalov/TMS_Course_Project_Infra.git"
        }
 
    agent  any
