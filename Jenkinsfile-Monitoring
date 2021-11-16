@@ -1,5 +1,5 @@
 pipeline {
-    node ('slave')
+    agent {label 'slave'}
     environment {
         imagename = "vzhyhalau/tmscourseproject"
         registryCredential = 'git'
