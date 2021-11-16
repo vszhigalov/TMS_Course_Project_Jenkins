@@ -105,7 +105,7 @@ pipeline {
         }
        stage("Ansible") {
             steps {
-               ansiblePlaybook become: true, becomeUser: 'ubuntu', credentialsId: 'TMS-ireland', disableHostKeyChecking: true, installation: 'Ansible', inventory: 'ec2.py', playbook: 'deploy.yml'
+               ansiblePlaybook become: true, becomeUser: 'root', credentialsId: 'TMS-ireland', disableHostKeyChecking: true, installation: 'Ansible', inventory: 'ec2.py', playbook: 'deploy.yml'
             }
           }
 
