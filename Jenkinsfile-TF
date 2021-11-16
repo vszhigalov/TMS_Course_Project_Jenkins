@@ -1,5 +1,5 @@
 pipeline {
-
+    node ('slave')
     parameters {
         booleanParam(name: 'autoApprove', defaultValue: false, description: 'Automatically run apply after generating plan?')
 
@@ -15,9 +15,7 @@ pipeline {
         GIT_URL         = "git@github.com:vszhigalov/TMS_Course_Project_Infra.git"
        }
 
-    node ('slave')
-
-        tools {
+    tools {
         "org.jenkinsci.plugins.terraform.TerraformInstallation" "terraform"
               }
     stages {
