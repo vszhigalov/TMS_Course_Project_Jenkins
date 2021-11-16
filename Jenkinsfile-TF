@@ -15,7 +15,7 @@ pipeline {
         GIT_URL         = "git@github.com:vszhigalov/TMS_Course_Project_Infra.git"
        }
 
-   agent  any
+    agent slave
 
         tools {
         "org.jenkinsci.plugins.terraform.TerraformInstallation" "terraform"
