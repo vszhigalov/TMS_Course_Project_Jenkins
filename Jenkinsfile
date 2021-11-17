@@ -105,7 +105,8 @@ pipeline {
         }
        stage("Ansible") {
             steps {
-               ansiblePlaybook become: true, becomeUser: 'root', credentialsId: 'TMS-ireland', disableHostKeyChecking: true, installation: 'Ansible', inventory: 'ec2.py', playbook: 'deploy.yml'
+               //ansiblePlaybook become: true, becomeUser: 'root', credentialsId: 'TMS-ireland', disableHostKeyChecking: true, installation: 'Ansible', inventory: 'ec2.py', playbook: 'deploy.yml'
+               sh "sudo /usr/local/bin/ansible-playbook deploy.yml -i ec2.py -b --become-user root --private-key /home/ubuntu/TMS-ireland.key -u ubuntu"
             }
           }
 
